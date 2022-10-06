@@ -1,3 +1,4 @@
+import java.security.spec.RSAOtherPrimeInfo;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Scanner;
@@ -15,8 +16,22 @@ public class VariousMethodsReversingArray {
             System.out.print("Enter the element at index (" + i + "): ");
             arr[i] = in.nextInt();
         }
-        System.out.println(Arrays.toString(arr));
+
+        System.out.println("Reversing using the usingAnotherArray() method");
+        usingAnotherArray(arr);
+        System.out.println();
+
+        System.out.println("Reversing using the swappingMirrorElements() method");
+        swappingMirrorElements(arr);
+        System.out.println();
+
+        System.out.println("Reversing using the inBuiltFunction() method");
+        inBuiltFunction(arr);
+        System.out.println();
+
+        System.out.println("Reversing using the bubbleSort() method");
         bubbleSort(arr);
+
     }
 
     /* Storing the last element of the original array
