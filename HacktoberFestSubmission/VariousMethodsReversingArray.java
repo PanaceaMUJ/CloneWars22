@@ -92,7 +92,7 @@ public class VariousMethodsReversingArray {
     }
 }
 
-/* Description of Time Complexities of each of the above mentioned Algorithms for Reversing a given Array
+/* Analysing each of the above mentioned Algorithms for reversing an Array
 * 1. usingAnotherArray(Integer[] arr)
 *            -> Time Complexity = O(n) i.e. linear time
 *            -> Space Complexity = O(n) because we are creating another array of the same size as that of the original array
@@ -100,7 +100,7 @@ public class VariousMethodsReversingArray {
 * 2. swappingMirrorElements(Integer[] arr)
 *            -> Time Complexity = O(n) i.e. linear time
  *           -> Space Complexity = O(1)
- *            > This algorithm is reverses the array in actually less than O(n) time complexity because,
+ *            > This algorithm reverses the array in actually less than O(n) time complexity because,
  *              we are running the loop only (n / 2) times but in Asymptotic notation it is considered to be O(n)
  *
  * 3. inBuiltFunction(Integer[] arr)
@@ -112,7 +112,7 @@ public class VariousMethodsReversingArray {
  *           -> Time Complexity = O(n²) i.e. Quadratic time
  *           -> Space Complexity = O(1)
  *
- * So the most efficient algorithm is in the swappingMirror() method.
- * This is because loop in the algorithm runs only n/2 times.
+ * So the most efficient algorithm is in the swappingMirrorElements() method.
+ * This is because the loop in the algorithm runs only n/2 times.
  * So it is actually less than O(n) but in Asymptotic notation it is considered to be O(n).
  * */
