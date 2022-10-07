@@ -28,10 +28,6 @@ public class VariousMethodsReversingArray {
         System.out.println("Reversing using the inBuiltFunction() method");
         inBuiltFunction(arr);
         System.out.println();
-
-        System.out.println("Reversing using the bubbleSort() method");
-        bubbleSort(arr);
-
     }
 
     /* Storing the last element of the original array
@@ -75,21 +71,6 @@ public class VariousMethodsReversingArray {
         // printing the array
         System.out.println(Arrays.toString(arr));
     }
-
-    /* Sorting the array in ascending order using bubble sort */
-    public static void bubbleSort(Integer[] arr) {
-        int n = arr.length;
-        for (int i = 0; i < n - 1; i++) {
-            for (int j = 0; j < n - i - 1; j++) {
-                if (arr[j] > arr[j + 1]) {
-                    int temp = arr[j];
-                    arr[j] = arr[j + 1];
-                    arr[j + 1] = temp;
-                }
-            }
-        }
-        System.out.println(Arrays.toString(arr));
-    }
 }
 
 /* Analysing each of the above mentioned Algorithms for reversing an Array
@@ -107,10 +88,6 @@ public class VariousMethodsReversingArray {
  *           -> Time Complexity = O(n) i.e. linear time
  *           -> Space Complexity = O(1)
  *            > The documentation for this method clearly specifies that this algorithm runs at linear time
- *
- * 4. bubbleSort(Integer[] arr)
- *           -> Time Complexity = O(n²) i.e. Quadratic time
- *           -> Space Complexity = O(1)
  *
  * So the most efficient algorithm is in the swappingMirrorElements() method.
  * This is because the loop in the algorithm runs only n/2 times.
