@@ -15,6 +15,8 @@ public class VariousMethodsReversingArray {
             System.out.print("Enter the element at index (" + i + "): ");
             arr[i] = in.nextInt();
         }
+		
+	System.out.println();
 
         System.out.println("Reversing using the usingAnotherArray() method");
         usingAnotherArray(arr);
@@ -37,7 +39,15 @@ public class VariousMethodsReversingArray {
         // creating another array
         int[] rev = new int[length];
 
-        // using the above created array to store the reversed original array arr
+        /* This method of Reversing the Array involves creating another array.
+        *  The below for-loop iterates over the given array from the end and,
+        *  the newly created array is used to store those elements from start.
+        *  This can be easily understood by the following example.
+        *  If an array is iterated from the end and printing the values, we get
+        *  the original array in reverse order in the output. But here another array
+        *  is used to simply store the values in that fashion. 
+        *  Here, in arr[length - i - 1], i is being subtracted from (length - 1)
+        *  in order to extract the element from the original array from the end. */
         for (int i = 0; i < length; i++) {
             rev[i] = arr[length - i - 1];
         }
@@ -50,7 +60,10 @@ public class VariousMethodsReversingArray {
     public static void swappingMirrorElements(Integer[] arr) {
         int length = arr.length, temp = 0;
 
-        // swapping logic
+        /* In this method, the elements which are mirror to each other with respect to the center are swapped.
+        *  So, the loop iterator "i" goes from the first index to the index just less than the middle of the array.
+        *  Then simply using a third variable called temp, the element at the current index is swapped with the 
+        *  element exactly the same distance from the end, making it to be the mirror element. */
         for (int i = 0; i < length / 2; i++) {
             temp = arr[i];
             arr[i] = arr[length - i - 1];
@@ -64,7 +77,8 @@ public class VariousMethodsReversingArray {
     /* Reversing the original array using inbuilt function */
     public static void inBuiltFunction(Integer[] arr) {
 
-        // calling the reverse function from the collections class
+        /* Reverses the order of the elements in the specified list.
+        *  This method runs in linear time as stated in the Java Documentation. */
         Collections.reverse(Arrays.asList(arr));
 
         // printing the array
