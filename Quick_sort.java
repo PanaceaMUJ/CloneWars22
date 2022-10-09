@@ -1,5 +1,3 @@
-package oOPS;
-
 import java.util.Scanner;
 
 public class Quick_sort 
