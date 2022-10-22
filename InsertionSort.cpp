@@ -32,7 +32,14 @@ void printArray(int arr[], int n)
 
 int main() 
 { 
-    int arr[] = { 12, 11, 13, 5, 6 }; 
+     int arr[5];
+
+  cout << "Enter 5 numbers: " << endl;
+
+  //  store input from user to array
+  for (int i = 0; i < 5; ++i) {
+    cin >> arr[i];
+  } 
     int N = sizeof(arr) / sizeof(arr[0]); 
   
     insertionSort(arr, N); 
